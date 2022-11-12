@@ -53,7 +53,7 @@ WELL_KNOWN_URLS = [
 ]
 
 urlpatterns = AUTH_URLS + WELL_KNOWN_URLS + [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls)
     url(r'^auto_auth/$', core_views.AutoAuth.as_view(), name='auto_auth'),
     url(r'^api-auth/', include((AUTH_URLS, 'rest_framework'))),
     url(r'^api-docs/', get_swagger_view(title='Ecommerce API'), name='api_docs'),
