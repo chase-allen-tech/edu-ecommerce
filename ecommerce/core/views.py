@@ -112,4 +112,5 @@ class LogoutView(EdxOAuth2LogoutView):
     """ Logout view that redirects the user to the LMS logout page. """
 
     def get_redirect_url(self, *args, **kwargs):
+        logging.info(self.request.site.siteconfiguration)
         return self.request.site.siteconfiguration.oauth_settings['SOCIAL_AUTH_EDX_OAUTH2_LOGOUT_URL']
