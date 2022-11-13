@@ -81,6 +81,7 @@ class AutoAuth(View):
     lms_user_id = 45654
 
     def get(self, request):
+        logging.info("[auto auth get]")
         if not getattr(settings, 'ENABLE_AUTO_AUTH', None):
             raise Http404
 
