@@ -179,6 +179,9 @@ class Command(BaseCommand):
         base_cookie_domain = options.get('base_cookie_domain', '')
         discovery_api_url = options.get('discovery_api_url')
 
+        logging.info("{ -------------- ROOT ----------------}")
+        logging.info(lms_public_url_root)
+
         enable_microfrontend_for_basket_page = bool(options.get('enable_microfrontend_for_basket_page', False))
         payment_microfrontend_url = options.get(
             'payment_microfrontend_url'
