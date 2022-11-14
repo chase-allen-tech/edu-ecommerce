@@ -1,7 +1,6 @@
 
 
 import os
-import logging
 
 from auth_backends.urls import oauth2_urlpatterns
 from django.conf import settings
@@ -72,7 +71,7 @@ urlpatterns = AUTH_URLS + WELL_KNOWN_URLS + [
 ]
 
 # Install Oscar extension URLs
-# urlpatterns += extensions_patterns
+urlpatterns += extensions_patterns
 
 robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
 urlpatterns += [
