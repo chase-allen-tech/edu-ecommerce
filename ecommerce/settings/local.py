@@ -12,7 +12,7 @@ from ecommerce.settings.base import *
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 DEBUG = True
 ALLOWED_HOSTS = ['*']
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['ecommerce.digitallearningsolution.net']
 # END DEBUG CONFIGURATION
 
 # EMAIL CONFIGURATION
