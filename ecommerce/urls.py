@@ -1,6 +1,7 @@
 
 
 import os
+import logging
 
 from auth_backends.urls import oauth2_urlpatterns
 from django.conf import settings
@@ -46,6 +47,9 @@ admin.site.site_title = admin.site.site_header
 # NOTE 1: Add our logout override first to ensure it is registered by Django as the actual logout view.
 # NOTE 2: These same patterns are used for rest_framework's browseable API authentication links.
 AUTH_URLS = [url(r'^logout/$', LogoutView.as_view(), name='logout'), ] + oauth2_urlpatterns
+
+logging.info('[** [URL DATA] ***]')
+logging(AUTH_URLS)
 
 WELL_KNOWN_URLS = [
     url(r'^.well-known/apple-developer-merchantid-domain-association.txt$',
