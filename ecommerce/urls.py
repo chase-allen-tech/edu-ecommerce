@@ -48,9 +48,6 @@ admin.site.site_title = admin.site.site_header
 # NOTE 2: These same patterns are used for rest_framework's browseable API authentication links.
 AUTH_URLS = [url(r'^logout/$', LogoutView.as_view(), name='logout'), ] + oauth2_urlpatterns
 
-logging.info('[** [URL DATA] ***]')
-logging.info(AUTH_URLS)
-
 WELL_KNOWN_URLS = [
     url(r'^.well-known/apple-developer-merchantid-domain-association.txt$',
         ApplePayMerchantDomainAssociationView.as_view(), name='apple_pay_domain_association'),
@@ -75,7 +72,7 @@ urlpatterns = AUTH_URLS + WELL_KNOWN_URLS + [
 ]
 
 # Install Oscar extension URLs
-urlpatterns += extensions_patterns
+# urlpatterns += extensions_patterns
 
 robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
 urlpatterns += [
