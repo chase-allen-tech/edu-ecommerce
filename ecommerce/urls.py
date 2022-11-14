@@ -49,7 +49,7 @@ admin.site.site_title = admin.site.site_header
 AUTH_URLS = [url(r'^logout/$', LogoutView.as_view(), name='logout'), ] + oauth2_urlpatterns
 
 logging.info('[** [URL DATA] ***]')
-logging(AUTH_URLS)
+logging.info(AUTH_URLS)
 
 WELL_KNOWN_URLS = [
     url(r'^.well-known/apple-developer-merchantid-domain-association.txt$',
